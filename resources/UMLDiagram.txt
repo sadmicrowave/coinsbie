@@ -1,0 +1,34 @@
+
+
+								 |
+[   User Interactions   ] 		 |		[ Controller Interactions ]
+---------------------------------|-------------------------------------------------------------------------------------------------------------------------
+						  		 |
+	 							 |											    1.__[func:callURI]
+	 																		    |
+	 																		    2.__[func:gatherBitcoinData] 
+	 																		    |	   +(ret: $bitcoin_market_cap)
+	 																		    |
+	 																		    3.__[func:formulateInsertQuery] 	
+	 																		    |	   +(param: $bitcoin_market_cap)
+	 																		    |      +(param: $data)
+						 														|	   +(ret: $stack)
+						 														|
+[Load Dashboard (50)]___  							 					    ____4.__[func:executeInsertQuery]___
+ TickerController@search\ 												   /	       +(param: $stack)         \   
+					     \							                   (False)	 		                    	 \
+						  \	  								             /									 	  \
+						   \___[@search]____[func:isFiveMinuteCadence]__/									  	   \	
+						   /  +(ret: $view)	 +(param: $queryString)		\									   		\	
+						  /		   ^                                     \									    	 \
+					     /			\			   			           (True)									 	  \
+[Search Coin (1)]_______/ 			 \				    				   \									  	   \
+ TickerController@search			  \		  							 	\									   		\	
+						 			   \									 \___________________________________________\__[func:execute[Main|Search]Query]
+						 				\									  									  		      +(ret: $data)	  				\
+						 				 \									  									  				   		   	   				 \
+						 				  \									  									  						        			  \
+						 				   \									  									  						    			  /
+						 					\________________________________________________________________________________________________________________/
+						 													  									  			
+						 													  									  								
