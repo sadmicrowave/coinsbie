@@ -12,14 +12,14 @@
 	</script>
 
 
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="public/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
 	
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+	<link rel="manifest" href="public/site.webmanifest">
+	<link rel="mask-icon" href="public/safari-pinned-tab.svg" color="#5bbad5">
 	
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
@@ -33,14 +33,14 @@
     <title>Coinsbie Calculator | Maximizing Your Investment</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/line-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.css') }}">
     <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/nivo-lightbox.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/magnific-popup.css') }}">-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.css') }}">
     <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/menu_sideslide.css') }}">-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}">    
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">    
     <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/responsive.css') }}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/owl.carousel.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/owl.theme.css') }}">-->

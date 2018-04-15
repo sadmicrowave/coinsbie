@@ -1,4 +1,6 @@
 <IfModule mod_rewrite.c>
+    DirectoryIndex public/index.php public/index.html
+
     <IfModule mod_negotiation.c>
         Options -MultiViews
     </IfModule>
@@ -12,7 +14,7 @@
     # Handle Front Controller...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteRule ^ index.php [L]
+    RewriteRule ^ /public/index.php [L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .

@@ -1,6 +1,6 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light" role="navigation">
-  <a class="navbar-brand coinsbie" href="/"><img id="main-brand" src="{{ URL::to('/') }}/img/Coinsbie Calculator - Mini.png" alt="Coinsbie Calculator"/></a>
+  <a class="navbar-brand coinsbie" href="/"><img id="main-brand" src="{{ URL::to('/') }}/public/img/Coinsbie Calculator - Mini.png" alt="Coinsbie Calculator"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

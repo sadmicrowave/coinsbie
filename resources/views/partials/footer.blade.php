@@ -82,7 +82,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>3NvmSwsF19NKmTNi2txG8ndvUWXVeRDhnH</p>
-		        <img src="{{ URL::to('/') }}/img/QR_BTC_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_BTC_Address.jpg"/>
 		        
 	        </div>
 	      </div>
@@ -103,7 +103,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>MWf8evizV8RmwwPeeFnEPTj7Nhu7LhugMC</p>
-		        <img src="{{ URL::to('/') }}/img/QR_LTC_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_LTC_Address.jpg"/>
 		        
 	        </div>
 	      </div>
@@ -124,7 +124,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>0x5bF0E0882A9eB5dCc5FF28E9aF8d38c715B24538</p>
-		        <img src="{{ URL::to('/') }}/img/QR_ETH_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_ETH_Address.jpg"/>
 		        
 	        </div>
 	      </div>
@@ -145,7 +145,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>qzv84wfmp63m6rpf60w3lrzyr9fry803g5yjnzhszx</p>
-		        <img src="{{ URL::to('/') }}/img/QR_BCH_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_BCH_Address.jpg"/>
 		        
 	        </div>
 	      </div>
@@ -154,27 +154,27 @@
 	</div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="{{ asset('/js/jquery-min.js') }}"></script>
-    <script src="{{ asset('/js/tether.min.js') }}"></script>
-    <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('/js/classie.js') }}"></script>
-    <script src="{{ asset('/js/mixitup.min.js') }}"></script>
-    <script src="{{ asset('/js/nivo-lightbox.js') }}"></script>
-    <script src="{{ asset('/js/owl.carousel.min.js') }}"></script>   
-    <script src="{{ asset('/js/jquery.stellar.min.js') }}"></script>    
-    <script src="{{ asset('/js/jquery.nav.js') }}"></script>
-    <script src="{{ asset('/js/smooth-scroll.js') }}"></script>  
-    <script src="{{ asset('/js/smooth-on-scroll.js') }}"></script>
-    <script src="{{ asset('/js/wow.js') }}"></script>    
+    <script src="{{ asset('public/js/jquery-min.js') }}"></script>
+    <script src="{{ asset('public/js/tether.min.js') }}"></script>
+    <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('public/js/classie.js') }}"></script>
+    <script src="{{ asset('public/js/mixitup.min.js') }}"></script>
+    <script src="{{ asset('public/js/nivo-lightbox.js') }}"></script>
+    <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>   
+    <script src="{{ asset('public/js/jquery.stellar.min.js') }}"></script>    
+    <script src="{{ asset('public/js/jquery.nav.js') }}"></script>
+    <script src="{{ asset('public/js/smooth-scroll.js') }}"></script>  
+    <script src="{{ asset('public/js/smooth-on-scroll.js') }}"></script>
+    <script src="{{ asset('public/js/wow.js') }}"></script>    
     <!--<script src="{{ asset('/js/menu.js') }}"></script>-->
     <!--<script src="{{ asset('/js/jquery.vide.js') }}"></script>
     <script src="{{ asset('/js/jquery.counterup.min.js') }}"></script> -->
-    <script src="{{ asset('/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('/js/waypoints.min.js') }}"></script>    
-    <script src="{{ asset('/js/form-validator.min.js') }}"></script>
-    <script src="{{ asset('/js/form-script.js') }}"></script>     
+    <script src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('public/js/waypoints.min.js') }}"></script>    
+    <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
+    <script src="{{ asset('public/js/form-script.js') }}"></script>     
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <script src="{{ asset('/js/main.js') }}"></script>
+    <script src="{{ asset('public/js/main.js') }}"></script>
    <!-- <script src="{{ asset('/js/hero-slider.js') }}"></script>-->
    
    <script src="https://www.google.com/recaptcha/api.js" async defer></script>

@@ -81,7 +81,7 @@
 						    <div id="card-input" class="card coin with-question" style="width: 18rem;">
 							  <div class="card-body">
 							    <h5 class="card-title">Investment Amount</h5>
-							    <input id="coin_input" pattern="[0-9.]+" data-usd-price="{{ $ticker['price_usd'] }}" data-potential-price="{{ $ticker['price_at_bitcoin_marketcap'] }}"/>
+							    <input id="coin_input" pattern="[0-9.]+" data-usd-price="{{ $ticker['price_usd'] }}" data-potential-price="{{ $ticker['price_at_bitcoin_marketcap'] }}" data-earning-multiple="{{ $ticker['potential_earning_multiple'] }}"/>
 							  </div>
 							</div>
 			

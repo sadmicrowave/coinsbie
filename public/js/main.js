@@ -201,8 +201,9 @@
 	    var  inv = parseInt( $(this).val() )
 	    	,price = $(this).data('usd-price')
 	    	,potprice = $(this).data('potential-price')
+	    	,potearn  = $(this).data('earning-multiple')
 	    	,coinamt = ( inv / price ).toFixed(2)
-	    	,potentialearnings = ( inv * potprice ).toFixed(2)
+	    	,potentialearnings = ( inv * potearn ).toFixed(2)
 	    	
 	    	,coinamt = ( ! isNaN(coinamt) ? coinamt : '' )
 	    	,potentialearnings = ( ! isNaN(potentialearnings) ? '$' + String(potentialearnings) : '' )
