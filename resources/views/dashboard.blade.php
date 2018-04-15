@@ -40,7 +40,7 @@
 				  <div class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">          
 			          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Top <span>Fifty</span></h2>
 			          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-			          <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">The top fifty hottest coins on the market as defined by <a href="http://coinmarketcap.com" title="coinmarketcap.com">coinmarketcap.com</a>.  Use the search bar to find a specific coin by symbol or coin name and view its Coinsbie Calculation.  Alternatively, you may click the table row of a coin in the table below to see the Coinsbie Calculation. test</p>
+			          <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">The top fifty hottest coins on the market as defined by <a href="http://coinmarketcap.com" title="coinmarketcap.com">coinmarketcap.com</a>.  Use the search bar to find a specific coin by symbol or coin name and view its Coinsbie Calculation.  Alternatively, you may click the table row of a coin in the table below to see the Coinsbie Calculation.</p>
 				  </div>
 		        </div>
 			    
