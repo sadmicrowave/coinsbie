@@ -32,9 +32,7 @@
 
 
     <section class="distance">
-	    <div class="container">
-		    
-		    
+	    <div class="container">		    
 		    <div class="row justify-content-md-center">
 			    <div class="section-header">
 				  <div class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">          
@@ -73,41 +71,10 @@
 				    </div>
 			    </div>
 		    </div>
-	    </div>
-	    
-	    
-	    
+	    </div>	    
     </section> 
 
     
-    
-    
-    
-    
-
-    <!-- Subcribe Section Start -->
-    <!--<div id="subscribe" class="section">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe <span>Newsletter</span></h2>
-          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-          <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe to get all latest news from us.</p>
-        </div>
-        <div class="row justify-content-md-center">
-          <div class="col-md-8">
-              <form id="subscribeForm" class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
-	              <div class="form-group" style="width:100%;">
-	                <input id="subscribe-email-input" type="email" class="mb-20 form-control" name="email" data-error="Bruh, that email address is invalid" required placeholder="Email Address">
-	                <button id="subscribe-email-btn" class="sub_btn">subscribe</button>
-	                <div class="help-block with-errors"></div>
-	              </div>
-				<div id="msgSubscribeSubmit" class="h3 text-center hidden"></div> 
-              </form>
-          </div>
-        </div>
-      </div>
-    </div>-->
-    <!-- Subcribe Section End -->
 
 @include('partials.footer')
  
