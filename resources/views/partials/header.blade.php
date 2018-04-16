@@ -36,15 +36,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/fontawesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.css') }}">
-    <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/nivo-lightbox.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/magnific-popup.css') }}">-->
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.css') }}">
-    <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/menu_sideslide.css') }}">-->
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">    
-    <!--<link rel="stylesheet" type="text/css" href="{{ asset('/css/responsive.css') }}">
-	<link rel="stylesheet" type="text/css" href="{{ asset('/css/owl.carousel.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('/css/owl.theme.css') }}">-->
-    
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
     
     <!-- Google Fonts -->
    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
