@@ -12,14 +12,14 @@
 	</script>
 
 
-	<link rel="icon" href="public/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="{{ URL::to('/') }}/public/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{ URL::to('/') }}/public/favicon.ico" type="image/x-icon">
 	
-	<link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
-	<link rel="manifest" href="public/site.webmanifest">
-	<link rel="mask-icon" href="public/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ URL::to('/') }}/public/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ URL::to('/') }}/public/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ URL::to('/') }}/public/favicon-16x16.png">
+	<link rel="manifest" href="{{ URL::to('/') }}/public/site.webmanifest">
+	<link rel="mask-icon" href="{{ URL::to('/') }}/public/safari-pinned-tab.svg" color="#5bbad5">
 	
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
