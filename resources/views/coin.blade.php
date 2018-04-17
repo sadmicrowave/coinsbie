@@ -13,11 +13,18 @@
 				          <li class="selected pane">
 				          	<div class="contents text-center">
 					          	<br>
-				            	<h1 class="wow fadeInDown coin-title" data-wow-duration="1000ms" data-wow-delay="0.3s">{{$ticker['name']}} <span class="coin-symbol">({{$ticker['symbol']}})</span></h1>
+				            	<h1 class="wow fadeInDown coin-title" data-wow-duration="1000ms" data-wow-delay="0.3s">{{$coin['name']}} <span class="coin-symbol">({{$coin['symbol']}})</span></h1>
 				              
 								<form action="/coin" method="POST">
 									<input type="hidden" name="_token" value="{{ csrf_token() }}">
-									<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins" aria-describedby="basic-addon2"/>
+									<input type="text" id="main-search" list="coins" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins" aria-describedby="basic-addon2"/>
+									
+									<datalist id="coins">
+										@foreach($tickers as $ticker)
+											<option value="{{ $ticker['name'] }}">{{ $ticker['name'] }} ({{ $ticker['symbol']}})</option>
+										@endforeach
+									</datalist>
+									
 								</form>
 				            </div>
 				          </li>
@@ -38,7 +45,7 @@
 				    <div class="card coin" style="width: 18rem;">
 					  <div class="card-body">
 					    <h5 class="card-title">Current USD Price</h5>
-					    <p class="card-text">${{ number_format( $ticker['price_usd'], 2) }}</p>
+					    <p class="card-text">${{ number_format( $coin['price_usd'], 2) }}</p>
 					  </div>
 					</div>
 	
@@ -46,7 +53,7 @@
 					<div class="card coin with-question" ref="pot-max-price" style="width: 18rem;">
 					  <div class="card-body">
 					    <h5 class="card-title">Potential Max Price</h5>
-					    <p class="card-text">${{ number_format( $ticker['price_at_bitcoin_marketcap'], 2) }}</p>
+					    <p class="card-text">${{ number_format( $coin['price_at_bitcoin_marketcap'], 2) }}</p>
 					    <span class="card-info lnr lnr-question-circle"></span>
 					  </div>
 					</div>
@@ -54,7 +61,7 @@
 					<div class="card coin with-question" ref="earning-multiple" style="width: 18rem;">
 					  <div class="card-body">
 					    <h5 class="card-title">Potential Earning Multiple</h5>
-					    <p class="card-text">x{{ number_format( $ticker['potential_earning_multiple'], 2) }}</p>
+					    <p class="card-text">x{{ number_format( $coin['potential_earning_multiple'], 2) }}</p>
 					    <span class="card-info lnr lnr-question-circle"></span>
 					  </div>
 					</div>
@@ -81,7 +88,7 @@
 						    <div id="card-input" class="card coin with-question" style="width: 18rem;">
 							  <div class="card-body">
 							    <h5 class="card-title">Investment Amount</h5>
-							    <input id="coin_input" pattern="[0-9.]+" data-usd-price="{{ $ticker['price_usd'] }}" data-potential-price="{{ $ticker['price_at_bitcoin_marketcap'] }}" data-earning-multiple="{{ $ticker['potential_earning_multiple'] }}"/>
+							    <input id="coin_input" pattern="[0-9.]+" data-usd-price="{{ $coin['price_usd'] }}" data-potential-price="{{ $coin['price_at_bitcoin_marketcap'] }}" data-earning-multiple="{{ $coin['potential_earning_multiple'] }}"/>
 							  </div>
 							</div>
 			

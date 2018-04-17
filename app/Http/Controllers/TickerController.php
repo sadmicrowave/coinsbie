@@ -248,11 +248,16 @@ class TickerController extends Controller
 	*
 	*	@returns $tickers
 	*/
-	public function index ()
+	public function index ($internal_call=False)
 	{
 		$tickers = \App\Ticker::orderBy('rank', 'asc')
 							->take(50)
 							->get();
+		
+		if ($internal_call)
+		{
+			return $tickers;
+		}
 		
 		return view('dashboard')->with('tickers', $tickers);
 	}
@@ -271,14 +276,16 @@ class TickerController extends Controller
 		{
 			self::logSearch($search);
 			
-			$ticker = \App\Ticker::where('symbol', '=', $search)
+			$coin = \App\Ticker::where('symbol', '=', $search)
 							->orWhere('name', '=', $search)
 							->get();
 			
-			if ( $ticker->isEmpty() )			
+			if ( $coin->isEmpty() )			
 				return Redirect::to('404');
+				
+			$tickers = self::index(True);
 		
-			return view('coin')->with('ticker', $ticker[0]);
+			return view('coin')->with(['coin' => $coin[0], 'tickers' => $tickers]);
 			
 		}
 		
