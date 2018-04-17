@@ -266,7 +266,6 @@ class TickerController extends Controller
 	*/
 	public function search ($search)
 	{
-
 		if ( $search ) 
 		{
 			self::logSearch($search);
@@ -276,7 +275,8 @@ class TickerController extends Controller
 							->get();
 			
 			if ( $ticker->isEmpty() )			
-				return Redirect::to('404');
+				\App::abort(404);
+			#	return Redirect::to('404');
 		
 			return view('coin')->with('ticker', $ticker[0]);
 			
