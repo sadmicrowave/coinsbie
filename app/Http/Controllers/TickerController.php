@@ -279,7 +279,7 @@ class TickerController extends Controller
 							->orWhere('name', '=', $search)
 							->get();
 							
-			if ( $ticker->isEmpty() )			
+			if ( $coin->isEmpty() )			
 				\App::abort(404);
 			#	return Redirect::to('404');
 

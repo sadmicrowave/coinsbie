@@ -19,7 +19,7 @@
 									<input type="hidden" name="_token" value="{{ csrf_token() }}">
 									<input type="text" id="main-search" list="coins" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins" aria-describedby="basic-addon2"/>
 									
-									<datalist id="coins">
+									<datalist id="coins"> 
 										@foreach($tickers as $ticker)
 											<option value="{{ $ticker['name'] }}">{{ $ticker['name'] }} ({{ $ticker['symbol']}})</option>
 										@endforeach
