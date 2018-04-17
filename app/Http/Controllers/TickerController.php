@@ -271,7 +271,6 @@ class TickerController extends Controller
 	*/
 	public function search ($search)
 	{
-
 		if ( $search ) 
 		{
 			self::logSearch($search);
@@ -279,10 +278,11 @@ class TickerController extends Controller
 			$coin = \App\Ticker::where('symbol', '=', $search)
 							->orWhere('name', '=', $search)
 							->get();
-			
-			if ( $coin->isEmpty() )			
-				return Redirect::to('404');
-				
+							
+			if ( $ticker->isEmpty() )			
+				\App::abort(404);
+			#	return Redirect::to('404');
+
 			$tickers = self::index(True);
 		
 			return view('coin')->with(['coin' => $coin[0], 'tickers' => $tickers]);
