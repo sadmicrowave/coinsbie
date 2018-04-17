@@ -55,9 +55,18 @@ class Handler extends ExceptionHandler
             {
                 case 404:
                     return redirect()->route('404');
-                    break;               
+                    break;
+                
+                case 500:
+                	return redirect()->route('500');
+                	break;        
             }
         }
+        
+        if ($exception instanceof MethodNotAllowedHttpException)
+        {
+	        return redirect()->route('500');
+	    }
 
         return parent::render($request, $exception);
     }

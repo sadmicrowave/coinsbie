@@ -50,6 +50,7 @@ Route::get('/d17059dfce4c09ef5e437b1d9455f7c6', 'TickerController@updateCoins');
 
 
 Route::get('404',['as'=>'404','uses'=>'ErrorHandlerController@errorCode404']);
+Route::get('500',['as'=>'500','uses'=>'ErrorHandlerController@errorCode500']);
 
 /*
 Route::get('contact', function() {
