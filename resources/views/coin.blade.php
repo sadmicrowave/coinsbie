@@ -60,7 +60,7 @@
 					
 					<div class="card coin with-question" ref="earning-multiple" style="width: 18rem;">
 					  <div class="card-body">
-					    <h5 class="card-title">Potential Earning Multiple</h5>
+					    <h5 class="card-title">Earning Multiple</h5>
 					    <p class="card-text">x{{ number_format( $coin['potential_earning_multiple'], 2) }}</p>
 					    <span class="card-info lnr lnr-question-circle"></span>
 					  </div>
