@@ -74,10 +74,11 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="DonateBitcoin">Donate Bitcoin</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
+	        <h5 class="col-12 modal-title text-center" id="DonateBitcoin">Donate Bitcoin
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	        </h5>
 	      </div>
 	      <div class="modal-body">
 	        <div class="contents text-center">
@@ -95,10 +96,11 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="DonateLitecoin">Donate Litecoin</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
+	        <h5 class="col-12 modal-title text-center" id="DonateLitecoin">Donate Litecoin
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	        </h5>
 	      </div>
 	      <div class="modal-body">
 	        <div class="contents text-center">
@@ -116,10 +118,11 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="DonateEthereum">Donate Ethereum</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
+	        <h5 class="col-12 modal-title text-center" id="DonateEthereum">Donate Ethereum
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	        </h5>
 	      </div>
 	      <div class="modal-body">
 	        <div class="contents text-center">
@@ -137,10 +140,11 @@
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
-	        <h5 class="modal-title" id="DonateBitcoinCash">Donate Bitcoin Cash</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
+	        <h5 class="col-12 modal-title text-center" id="DonateBitcoinCash">Donate Bitcoin Cash
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+	        </h5>
 	      </div>
 	      <div class="modal-body">
 	        <div class="contents text-center">
@@ -166,16 +170,12 @@
     <script src="{{ asset('public/js/smooth-scroll.js') }}"></script>  
     <script src="{{ asset('public/js/smooth-on-scroll.js') }}"></script>
     <script src="{{ asset('public/js/wow.js') }}"></script>    
-    <!--<script src="{{ asset('/js/menu.js') }}"></script>-->
-    <!--<script src="{{ asset('/js/jquery.vide.js') }}"></script>
-    <script src="{{ asset('/js/jquery.counterup.min.js') }}"></script> -->
     <script src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('public/js/waypoints.min.js') }}"></script>    
     <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
     <script src="{{ asset('public/js/form-script.js') }}"></script>     
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="{{ asset('public/js/main.js') }}"></script>
-   <!-- <script src="{{ asset('/js/hero-slider.js') }}"></script>-->
    
    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
