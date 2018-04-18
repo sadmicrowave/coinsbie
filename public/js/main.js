@@ -219,7 +219,48 @@
 	    $('#total_coins').text( coinamt.replace(/\B(?=(\d{3})+\b)/g, ",") );
 	    $('#potential_earnings').text( potentialearnings.replace(/\B(?=(\d{3})+\b)/g, ",") );
 	});
-   
+
+
+
+/*
+	Handle Continuous Scroll Pagination on "Load Next 50 Coins" Button Click
+   ========================================================================== */
+   $("button#loadmore").on('click', function(){
+	  var coins 	= $.parseJSON( sessionStorage.getItem('coins') )
+	  	 ,index 	= parseInt( sessionStorage.getItem('tableIndex') )
+	  	 ,nextStart = index + 1
+	  	 ,nextStop 	= index + 50
+	  	 ,elmsToAppend = [] //create element node container to append to dialog body
+	  	 ;
+	  
+	  $.each(coins, function(index, coin){
+		  if ( coin['rank'] >= nextStart && coin['rank'] <= nextStop )
+		  {
+			  elmsToAppend.push(
+				  					$("<tr/>").addClass('clickable-row')
+				  						   .data('href', '/coin/' + coin['symbol'])
+				  						   .append(
+					  						    $("<td/>").text( coin['rank'] )
+					  						   ,$("<td/>").text( coin['name'] )
+					  						   ,$("<td/>").text( coin['symbol'] )
+					  						   ,$("<td/>").text( coin['price_usd'] )
+					  						   ,$("<td/>").text( coin['market_cap_usd'] )
+					  						   ,$("<td/>").text( coin['available_supply']
+					  						   				  	,$("<span/>").addClass('lnr lnr-chevron-right table-row-chevron')
+					  						   				    )
+				  						   )
+				  						   .on('click', function(){
+					  						   window.location = $(this).data("href");
+				  						   })
+			  				);
+		  }
+	  });
+	  
+	  $("table#top-50-table tbody").append( elmsToAppend );
+	  
+	  sessionStorage.setItem('tableIndex', nextStop);
+   });
+
    
 /*
 	Hero Login Slider

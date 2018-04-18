@@ -1,3 +1,4 @@
+
 @include('partials.header')
      
    	<!-- Header Section Start -->
@@ -48,6 +49,7 @@
 							    <table id="top-50-table" class="table table-striped table-bordered table-hover rounded">
 								  <thead>
 								    <tr>
+									  <th scope="col">Rank</th>
 								      <th scope="col">Name</th>
 								      <th scope="col">Symbol</th>
 								      <th scope="col">Price (USD)</th>
@@ -58,6 +60,7 @@
 								  <tbody>
 								  	@foreach($tickers as $ticker)
 								    <tr class='clickable-row' data-href="/coin/{{$ticker['symbol']}}">
+									  <td>{{$ticker['rank']}}</td>
 								      <td>{{$ticker['name']}}</td>
 								      <td>{{$ticker['symbol']}}</td>
 								      <td>${{ number_format( $ticker['price_usd'], 2) }}</td>
@@ -71,10 +74,19 @@
 				    </div>
 			    </div>
 		    </div>
+		    
+		    
+		    <br>
+		    <div class="row justify-content-md-center">
+			    <div class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"> 
+			    	<button id="loadmore" type="button" class="btn btn-primary rounded">Load Next 50 Coins</button>
+			    </div>
+		    </div>
+		    
+		    
 	    </div>	    
     </section> 
 
-    
 
 @include('partials.footer')
  

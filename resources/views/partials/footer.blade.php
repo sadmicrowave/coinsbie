@@ -177,9 +177,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="{{ asset('public/js/main.js') }}"></script>
    
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-   
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
     
   </body>
 </html>

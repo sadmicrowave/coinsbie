@@ -251,15 +251,20 @@ class TickerController extends Controller
 	public function index ($internal_call=False)
 	{
 		$tickers = \App\Ticker::orderBy('rank', 'asc')
-							->take(50)
+							//->take(50)
 							->get();
+		
+		
+		$allTickers = $tickers->toArray();
+		$top50 = array_slice($tickers->toArray(), 0, 50);
+		
 		
 		if ($internal_call)
 		{
-			return $tickers;
+			return $top50;
 		}
 		
-		return view('dashboard')->with('tickers', $tickers);
+		return view('dashboard')->with(['tickers' => $top50, 'allTickers' => json_encode( $allTickers ) ]);
 	}
 	
 	/*

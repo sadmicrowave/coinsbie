@@ -11,6 +11,10 @@
 		gtag('config', 'UA-117090827-1');
 	</script>
 
+	<script>
+		sessionStorage.setItem("coins", JSON.stringify( {!! $allTickers or '{}' !!} ) ); 	
+		sessionStorage.setItem('tableIndex', 50);	
+	</script>
 
 	<link rel="icon" href="{{ URL::to('/') }}/public/favicon.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="{{ URL::to('/') }}/public/favicon.ico" type="image/x-icon">
@@ -27,7 +31,6 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Coinsbie">
     <title>Coinsbie Calculator | Maximizing Your Investment</title>
@@ -40,7 +43,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
     
     <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
       
   </head>
   <body>
