@@ -83,7 +83,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>3NvmSwsF19NKmTNi2txG8ndvUWXVeRDhnH</p>
-		        <img src="{{ URL::to('/') }}/public/img/QR_BTC_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_BTC_Address.jpg" alt="Bitcoin Donation Address QRCode"/>
 		        
 	        </div>
 	      </div>
@@ -105,7 +105,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>MWf8evizV8RmwwPeeFnEPTj7Nhu7LhugMC</p>
-		        <img src="{{ URL::to('/') }}/public/img/QR_LTC_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_LTC_Address.jpg" alt="Litecoin Donation Address QRCode"/>
 		        
 	        </div>
 	      </div>
@@ -127,7 +127,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>0x5bF0E0882A9eB5dCc5FF28E9aF8d38c715B24538</p>
-		        <img src="{{ URL::to('/') }}/public/img/QR_ETH_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_ETH_Address.jpg" alt="Ethereum Donation Address QRCode"/>
 		        
 	        </div>
 	      </div>
@@ -149,7 +149,7 @@
 	      <div class="modal-body">
 	        <div class="contents text-center">
 		        <p>qzv84wfmp63m6rpf60w3lrzyr9fry803g5yjnzhszx</p>
-		        <img src="{{ URL::to('/') }}/public/img/QR_BCH_Address.jpg"/>
+		        <img src="{{ URL::to('/') }}/public/img/QR_BCH_Address.jpg" alt="Bitcoin Cash Donation Address QRCode"/>
 		        
 	        </div>
 	      </div>
@@ -161,24 +161,24 @@
     <script src="{{ asset('public/js/jquery-min.js') }}"></script>
     <script src="{{ asset('public/js/tether.min.js') }}"></script>
     <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('public/js/classie.js') }}"></script>
-    <script src="{{ asset('public/js/mixitup.min.js') }}"></script>
-    <script src="{{ asset('public/js/nivo-lightbox.js') }}"></script>
-    <script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>   
-    <script src="{{ asset('public/js/jquery.stellar.min.js') }}"></script>    
-    <script src="{{ asset('public/js/jquery.nav.js') }}"></script>
-    <script src="{{ asset('public/js/smooth-scroll.js') }}"></script>  
-    <script src="{{ asset('public/js/smooth-on-scroll.js') }}"></script>
-    <script src="{{ asset('public/js/wow.js') }}"></script>    
-    <script src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>
-    <script src="{{ asset('public/js/waypoints.min.js') }}"></script>    
+    <!--<script src="{{ asset('public/js/classie.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/mixitup.min.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/nivo-lightbox.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/jquery.stellar.min.js') }}"></script> -->  
+    <!--<script src="{{ asset('public/js/jquery.nav.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/smooth-scroll.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/smooth-on-scroll.js') }}"></script>-->
+    <script src="{{ asset('public/js/wow.min.js') }}"></script>    
+    <!--<script src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>-->
+    <!--<script src="{{ asset('public/js/waypoints.min.js') }}"></script>-->    
     <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
     <script src="{{ asset('public/js/form-script.js') }}"></script>     
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="{{ asset('public/js/main.js') }}"></script>
    
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
+    <!--<script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>-->
     
   </body>
 </html>

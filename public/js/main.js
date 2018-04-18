@@ -1,19 +1,4 @@
-/* 
-   CounterUp
-   ========================================================================== */
-   /* jQuery(document).ready(function( $ ) {
-      $('.counter').counterUp({
-        time: 500
-      });
-    });
-	*/
-/*
-   MixitUp
-   ========================================================================== */
-  /*  $(function(){
-      $('#portfolio').mixItUp();
-    });
-  */
+
 
 
 /*
@@ -26,36 +11,13 @@
 
 
 /*
- Ensure User's Browser is Capable
- ========================================================================== */
-/*	if (!Modernizr.svg) {
-		$("img#main-brand").attr("src", "img/Coinsbie Calculator.png");
-	}
-*/
-/*
  Auto Focus on Search Box
  ========================================================================== */
 	$(document).ready(function(){
 		$('input#main-search').focus();
 	});
   
-/*
-   Touch Owl Carousel
-   ========================================================================== */
- /*   $(".touch-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
-        slideSpeed: 1000,
-        stopOnHover: true,
-        autoPlay: true,
-        items: 1,
-        itemsDesktopSmall: [1024, 1],
-        itemsTablet: [600, 1],
-        itemsMobile: [479, 1]
-    });
-    $('.touch-slider').find('.owl-prev').html('<i class="fa fa-chevron-left"></i>');
-    $('.touch-slider').find('.owl-next').html('<i class="fa fa-chevron-right"></i>');
-  */
+
 /* 
    Sticky Nav
    ========================================================================== */
@@ -67,18 +29,7 @@
         }
     });
 
-/* 
-   VIDEO POP-UP
-   ========================================================================== */
-  /*  $('.video-popup').magnificPopup({
-        disableOn: 700,
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: false,
-        fixedContentPos: false,
-    });
-  */
+
 /* 
    Back Top Link
    ========================================================================== */
@@ -106,10 +57,10 @@
       //Initiat WOW JS
       new WOW().init();
 
-      // one page navigation 
+      /*// one page navigation 
       $('.main-navigation').onePageNav({
               currentClass: 'active'
-      });    
+      });*/    
   });
   
   
@@ -145,7 +96,7 @@
   
   /* stellar js
   ========================================================*/
-  $(function(){
+ /* $(function(){
     $.stellar({
       horizontalScrolling: false,
       verticalOffset: 10,
@@ -272,55 +223,6 @@
    });
 
    
-/*
-	Hero Login Slider
-   ========================================================================== */
- /*  
-   jQuery(document).ready(function( $ ) {
-	    var slidesWrapper = $('.cd-hero-slider')
-	    	,slidesNumber = slidesWrapper.children('li').length
-	    	;
-		
-		$("#sign-up-btn").on('click', function(){
-			nextSlide(slidesWrapper.find('.selected'), slidesWrapper, 1);
-		});
-		$(".sign-in-lnk").on('click', function(){
-			nextSlide(slidesWrapper.find('.selected'), slidesWrapper, 2);
-		});
-   					
-		$("#sign-up-back-1").on('click', function(){
-			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, 0);
-		});
-		$("#sign-up-back-2").on('click', function(){
-			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, 1);
-		});
-		
-		$("#sign-in-back").on('click', function(){
-			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, 1);
-		});
 
-		$("#sign-in-back").on('click', function(){
-			prevSlide(slidesWrapper.find('.selected'), slidesWrapper, 1);
-		});
-
-   
-	   function nextSlide(visibleSlide, container, n){
-			visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				visibleSlide.removeClass('is-moving');
-			});
-	
-			container.children('li').eq(n).addClass('selected from-right').prevAll().addClass('move-left');
-		}
-		
-		function prevSlide(visibleSlide, container, n){
-		visibleSlide.removeClass('selected from-left from-right').addClass('is-moving').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			visibleSlide.removeClass('is-moving');
-		});
-
-		container.children('li').eq(n).addClass('selected from-left').removeClass('move-left').nextAll().removeClass('move-left');
-	}
-	
-   });
-*/
    
    

@@ -27,6 +27,8 @@
 	
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="theme-color" content="#ffffff">
+	<meta name="description" content="Maximizing Cryptocurrency investor's Return on Investment by providing potential earning statistics for cryptocurrencies.">
+
 	  
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -38,8 +40,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
     
     <!-- Google Fonts -->
