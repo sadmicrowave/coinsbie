@@ -77,8 +77,9 @@
 		    
 		    
 		    <br>
-		    <div class="row justify-content-md-center">
-			    <div class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"> 
+		    <div class="row justify-content-md-center text-center">
+			    
+			    <div class="col-md-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"> 
 			    	<button id="loadmore" type="button" class="btn btn-primary rounded">Load Next 50 Coins</button>
 			    </div>
 		    </div>
