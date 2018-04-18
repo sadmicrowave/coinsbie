@@ -6,10 +6,10 @@
 			    <div class="wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
 				    <ul id="social">
 					    <li class="social">
-						    <a href="https://m.facebook.com/Coinsbie-212587355988266/" title="Facebook"><i class="fab fa-facebook"></i></a>
+						    <a href="https://www.facebook.com/coinsbie/" title="Facebook"><i class="fab fa-facebook"></i></a>
 					    </li>
 						<li class="social">
-							<a href="https://www.instagram.com/coinsbie/" title="Instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.instagram.com/coinsbiecaluclator/" title="Instagram"><i class="fab fa-instagram"></i></a>
 						</li>
 						<li class="social">
 							<a href="https://twitter.com/CoinsbieCalc" title="Twitter"><i class="fab fa-twitter"></i></a>
