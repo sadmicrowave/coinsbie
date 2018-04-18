@@ -236,6 +236,16 @@
 	  $.each(coins, function(index, coin){
 		  if ( coin['rank'] >= nextStart && coin['rank'] <= nextStop )
 		  {
+			  var price 		= parseFloat(coin['price_usd']).toFixed(2)
+			  	 ,priceParts 	= price.toString().split(".")
+			  	 ,priceNum 		= priceParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (priceParts[1] ? "." + priceParts[1] : "")
+			  	 
+			  	 ,cap 			= parseFloat(coin['market_cap_usd']).toFixed(2)
+			  	 ,capParts 		= cap.toString().split(".")
+			  	 ,capNum 		= capParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (capParts[1] ? "." + capParts[1] : "")
+			  	 ;
+
+			  
 			  elmsToAppend.push(
 				  					$("<tr/>").addClass('clickable-row')
 				  						   .data('href', '/coin/' + coin['symbol'])
@@ -243,9 +253,9 @@
 					  						    $("<td/>").text( coin['rank'] )
 					  						   ,$("<td/>").text( coin['name'] )
 					  						   ,$("<td/>").text( coin['symbol'] )
-					  						   ,$("<td/>").text( coin['price_usd'] )
-					  						   ,$("<td/>").text( coin['market_cap_usd'] )
-					  						   ,$("<td/>").text( coin['available_supply']
+					  						   ,$("<td/>").text( "$ " + priceNum )
+					  						   ,$("<td/>").text( "$ " + capNum )
+					  						   ,$("<td/>").append( coin['available_supply'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 					  						   				  	,$("<span/>").addClass('lnr lnr-chevron-right table-row-chevron')
 					  						   				    )
 				  						   )

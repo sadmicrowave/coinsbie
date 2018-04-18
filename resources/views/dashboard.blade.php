@@ -14,7 +14,7 @@
 				          <li class="selected pane">
 				          	<div class="contents text-center">
 					          	<br><br>
-				            	<h1 class="wow fadeInDown coinsbie" data-wow-duration="1000ms" data-wow-delay="0.3s">Coinsbie<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Maximizing Cryptocurrency Investors Return on Investment</h3></h1>
+				            	<h1 class="wow fadeInDown coinsbie" data-wow-duration="1000ms" data-wow-delay="0.3s">Coinsbie<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Maximizing Cryptocurrency Investor's Return on Investment</h3></h1>
 								<p class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">Free cryptocurrency investment statistics to help you make the right investment choices.</p>
 
 								<form action="/coin" method="POST">
@@ -63,8 +63,8 @@
 									  <td>{{$ticker['rank']}}</td>
 								      <td>{{$ticker['name']}}</td>
 								      <td>{{$ticker['symbol']}}</td>
-								      <td>${{ number_format( $ticker['price_usd'], 2) }}</td>
-								      <td>${{ number_format( $ticker['market_cap_usd'], 2) }}</td>
+								      <td>$ {{ number_format( $ticker['price_usd'], 2) }}</td>
+								      <td>$ {{ number_format( $ticker['market_cap_usd'], 2) }}</td>
 								      <td>{{ number_format( $ticker['available_supply'] ) }} <span class="lnr lnr-chevron-right table-row-chevron"></span></td>
 								    </tr>
 								    @endforeach
