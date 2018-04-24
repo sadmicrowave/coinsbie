@@ -16,7 +16,7 @@
 							  
 							  <form action="/coin" method="POST">
 								<input type="hidden" name="_token" value="{{ csrf_token() }}">
-								<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins" aria-describedby="basic-addon2"/>
+								<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins by Name or Symbol" autofocus aria-label="Search Coins by Name or Symbol" aria-describedby="basic-addon2"/>
 							  </form>
 				            </div>
 				          </li>
