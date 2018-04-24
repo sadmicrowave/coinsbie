@@ -164,24 +164,13 @@
     <script src="{{ asset('public/js/jquery-min.js') }}"></script>
     <script src="{{ asset('public/js/tether.min.js') }}"></script>
     <script src="{{ asset('public/js/bootstrap.min.js') }}"></script>
-    <!--<script src="{{ asset('public/js/classie.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/mixitup.min.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/nivo-lightbox.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/owl.carousel.min.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/jquery.stellar.min.js') }}"></script> -->  
-    <!--<script src="{{ asset('public/js/jquery.nav.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/smooth-scroll.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/smooth-on-scroll.js') }}"></script>-->
     <script src="{{ asset('public/js/wow.min.js') }}"></script>    
-    <!--<script src="{{ asset('public/js/jquery.magnific-popup.min.js') }}"></script>-->
-    <!--<script src="{{ asset('public/js/waypoints.min.js') }}"></script>-->    
     <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
-    <script src="{{ asset('public/js/form-script.js') }}"></script>     
+    <script src="{{ asset('public/js/datatables.min.js') }}"></script>     
     <script defer src="{{ asset('public/js/font-awesome.min.js') }}"></script>
-    <script src="{{ asset('public/js/main.js') }}"></script>
-   
-    <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
-    <!--<script defer src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>-->
     
+    <script src="{{ asset('public/js/form-script.js') }}"></script>
+    <script src="{{ asset('public/js/main.js') }}"></script>
+       
   </body>
 </html>

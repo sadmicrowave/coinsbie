@@ -42,10 +42,11 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/fontawesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/datatables.min.css') }}">        
+
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
     
     <!-- Google Fonts -->
-    <!--<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">-->
     <link href="{{ asset('public/css/sitefonts.min.css') }}" rel="stylesheet">
       
   </head>
