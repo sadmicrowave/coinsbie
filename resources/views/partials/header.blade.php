@@ -45,7 +45,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <!--<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">-->
+    <link href="{{ asset('public/css/sitefonts.min.css') }}" rel="stylesheet">
       
   </head>
   <body>
