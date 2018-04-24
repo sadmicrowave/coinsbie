@@ -15,7 +15,10 @@
 							<a href="https://twitter.com/CoinsbieCalc" title="Twitter"><i class="fab fa-twitter"></i></a>
 						</li>
 						<li class="social">
-							<a href="#" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+							<a href="https://www.reddit.com/user/coinsbiecalculator" title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+						</li>
+						<li class="social">
+							<a href="https://www.linkedin.com/company/coinsbie/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 						</li>
 				    </ul>
 			    </div>
