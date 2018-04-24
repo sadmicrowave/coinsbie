@@ -174,7 +174,7 @@
     <!--<script src="{{ asset('public/js/waypoints.min.js') }}"></script>-->    
     <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
     <script src="{{ asset('public/js/form-script.js') }}"></script>     
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script defer src="{{ asset('public/js/font-awesome.min.js') }}"></script>
     <script src="{{ asset('public/js/main.js') }}"></script>
    
     <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>-->
