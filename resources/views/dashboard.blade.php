@@ -45,32 +45,32 @@
 			    
 			    <div class="col-md-12">
 				    <div class="wow fadeInUp table-responsive" data-wow-duration="1000ms" data-wow-delay="0.3s">
-					    <div id="table-wrapper" class="card">
-							    <table id="top-50-table" class="table table-striped table-bordered table-hover rounded">
-								  <thead>
-								    <tr>
-									  <th scope="col">Rank</th>
-								      <th scope="col">Name</th>
-								      <th scope="col">Symbol</th>
-								      <th scope="col">Price (USD)</th>
-								      <th scope="col">Market Cap (USD)</th>
-								      <th scope="col">Available Supply</th>
-								    </tr>
-								  </thead>
-								  <tbody>
-								  	@foreach($tickers as $ticker)
-								    <tr class='clickable-row' data-href="/coin/{{$ticker['symbol']}}">
-									  <td>{{$ticker['rank']}}</td>
-								      <td>{{$ticker['name']}}</td>
-								      <td>{{$ticker['symbol']}}</td>
-								      <td>$ {{ number_format( $ticker['price_usd'], 2) }}</td>
-								      <td>$ {{ number_format( $ticker['market_cap_usd'], 2) }}</td>
-								      <td>{{ number_format( $ticker['available_supply'] ) }} <span class="lnr lnr-chevron-right table-row-chevron"></span></td>
-								    </tr>
-								    @endforeach
-								  </tbody>
-							    </table>
-					    </div>
+					    <table id="top-50-table" class="display table table-striped table-bordered table-hover rounded">
+						  <thead>
+						    <tr>
+							  <th scope="col">Rank</th>
+						      <th scope="col">Name</th>
+						      <th scope="col">Symbol</th>
+						      <th scope="col">Price (USD)</th>
+						      <th scope="col">Market Cap (USD)</th>
+						      <th scope="col">Available Supply</th>
+						      <th scope="col">Potential Price</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	@foreach($tickers as $ticker)
+						    <tr class='clickable-row' data-href="/coin/{{$ticker['symbol']}}">
+							  <td>{{$ticker['rank']}}</td>
+						      <td>{{$ticker['name']}}</td>
+						      <td>{{$ticker['symbol']}}</td>
+						      <td>$ {{ number_format( $ticker['price_usd'], 3) }}</td>
+						      <td>$ {{ number_format( $ticker['market_cap_usd'], 2) }}</td>
+						      <td>{{ number_format( $ticker['available_supply'] ) }}</td>
+						      <td>$ {{ number_format( $ticker['price_at_bitcoin_marketcap'], 3) }} <span class="lnr lnr-chevron-right table-row-chevron"></span></td>
+						    </tr>
+						    @endforeach
+						  </tbody>
+					    </table>
 				    </div>
 			    </div>
 		    </div>

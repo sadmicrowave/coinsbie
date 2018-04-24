@@ -82,27 +82,6 @@
 
   });
   
-
-  /* Nivo Lightbox
-  ========================================================*/
- /* jQuery(document).ready(function( $ ) {    
-     $('.lightbox').nivoLightbox({
-      effect: 'fadeScale',
-      keyboardNav: true,
-    });
-
-  });
- */
-  
-  /* stellar js
-  ========================================================*/
- /* $(function(){
-    $.stellar({
-      horizontalScrolling: false,
-      verticalOffset: 10,
-      responsive: true
-    });
-  });
   
 /* 
    Page Loader
@@ -131,6 +110,84 @@
 	  var ref = $(this).attr('ref');
 	  $( '#' + ref).modal('show'); 
    });
+   
+/*
+	Setup Datatables for main coin table sorting
+	========================================================================== */   
+	jQuery(document).ready(function() {
+		$.extend( true, $.fn.dataTable.defaults, {
+			"searching": false
+		});
+				
+		var t = $('#top-50-table').DataTable({
+			 "paging": false
+			,"info":   false
+			,"order":  [[ 0, "asc" ]]
+			,"initComplete": 
+				function (){
+		            var api = this.api();
+		            api.$('tr').click( function () {
+		                window.location = $(this).data("href")
+	        		});
+        		}
+		});
+		
+   	
+		/*
+	   	Handle Continuous Scroll Pagination on "Load Next 50 Coins" Button Click
+	   	========================================================================== */
+	   	$("button#loadmore").on('click', function(){
+		  var coins 	= $.parseJSON( sessionStorage.getItem('coins') )
+		  	 ,index 	= parseInt( sessionStorage.getItem('tableIndex') )
+		  	 ,nextStart = index + 1
+		  	 ,nextStop 	= index + 50
+		  	 ,elmsToAppend = [] //create element node container to append to dialog body
+		  	 //,dataTablesRows = []
+		  	 ;
+		  
+		  $.each(coins, function(index, coin){
+			  if ( coin['rank'] >= nextStart && coin['rank'] <= nextStop )
+			  {
+				  var price 		= parseFloat(coin['price_usd']).toFixed(3)
+				  	 ,priceParts 	= price.toString().split(".")
+				  	 ,priceNum 		= priceParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (priceParts[1] ? "." + priceParts[1] : "")
+				  	 
+				  	 ,cap 			= parseFloat(coin['market_cap_usd']).toFixed(2)
+				  	 ,capParts 		= cap.toString().split(".")
+				  	 ,capNum 		= capParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (capParts[1] ? "." + capParts[1] : "")
+				  	 
+				  	 ,potprice 		= parseFloat(coin['price_at_bitcoin_marketcap']).toFixed(3)
+				  	 ,potPriceParts = potprice.toString().split(".")
+				  	 ,potPriceNum	= potPriceParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (potPriceParts[1] ? "." + potPriceParts[1] : "")
+				  	 
+				  	 ,jRow			= $("<tr/>").addClass('clickable-row')
+				  	 
+					  						   .data('href', '/coin/' + coin['symbol'])
+					  						   .append(
+						  						    $("<td/>").text( coin['rank'] )
+						  						   ,$("<td/>").text( coin['name'] )
+						  						   ,$("<td/>").text( coin['symbol'] )
+						  						   ,$("<td/>").text( "$ " + priceNum )
+						  						   ,$("<td/>").text( "$ " + capNum )
+						  						   ,$("<td/>").text( coin['available_supply'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") )
+						  						   ,$("<td/>").append( "$ " + potPriceNum
+						  						   				  	,$("<span/>").addClass('lnr lnr-chevron-right table-row-chevron')
+						  						   				    )
+					  						   )
+					  						   .on('click', function(){
+						  						   window.location = $(this).data("href");
+					  						   })
+					  ;
+					  
+					t.row.add(jRow).draw();				 
+			  }
+		  });
+		  		  
+		  sessionStorage.setItem('tableIndex', nextStop);
+	   });
+   	
+   });
+   
    
 /*
 	Input Card Focus on Input when Clicked
@@ -173,54 +230,7 @@
 
 
 
-/*
-	Handle Continuous Scroll Pagination on "Load Next 50 Coins" Button Click
-   ========================================================================== */
-   $("button#loadmore").on('click', function(){
-	  var coins 	= $.parseJSON( sessionStorage.getItem('coins') )
-	  	 ,index 	= parseInt( sessionStorage.getItem('tableIndex') )
-	  	 ,nextStart = index + 1
-	  	 ,nextStop 	= index + 50
-	  	 ,elmsToAppend = [] //create element node container to append to dialog body
-	  	 ;
-	  
-	  $.each(coins, function(index, coin){
-		  if ( coin['rank'] >= nextStart && coin['rank'] <= nextStop )
-		  {
-			  var price 		= parseFloat(coin['price_usd']).toFixed(2)
-			  	 ,priceParts 	= price.toString().split(".")
-			  	 ,priceNum 		= priceParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (priceParts[1] ? "." + priceParts[1] : "")
-			  	 
-			  	 ,cap 			= parseFloat(coin['market_cap_usd']).toFixed(2)
-			  	 ,capParts 		= cap.toString().split(".")
-			  	 ,capNum 		= capParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (capParts[1] ? "." + capParts[1] : "")
-			  	 ;
 
-			  
-			  elmsToAppend.push(
-				  					$("<tr/>").addClass('clickable-row')
-				  						   .data('href', '/coin/' + coin['symbol'])
-				  						   .append(
-					  						    $("<td/>").text( coin['rank'] )
-					  						   ,$("<td/>").text( coin['name'] )
-					  						   ,$("<td/>").text( coin['symbol'] )
-					  						   ,$("<td/>").text( "$ " + priceNum )
-					  						   ,$("<td/>").text( "$ " + capNum )
-					  						   ,$("<td/>").append( coin['available_supply'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-					  						   				  	,$("<span/>").addClass('lnr lnr-chevron-right table-row-chevron')
-					  						   				    )
-				  						   )
-				  						   .on('click', function(){
-					  						   window.location = $(this).data("href");
-				  						   })
-			  				);
-		  }
-	  });
-	  
-	  $("table#top-50-table tbody").append( elmsToAppend );
-	  
-	  sessionStorage.setItem('tableIndex', nextStop);
-   });
 
    
 
