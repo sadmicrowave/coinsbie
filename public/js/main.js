@@ -98,7 +98,7 @@
    ========================================================================== */   
    
    $('a.donate').on('click', function(){
-	  var ref = $(this).attr('ref');
+	  var ref = $(this).data('ref');
 	  $( '#' + ref).modal('show'); 
    });
 

@@ -12,7 +12,9 @@
 			          <ul class="cd-hero-slider">
 				          <li class="selected pane">
 				          	<div class="contents text-center">
-				              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">How To Use Coinsbie<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Helping you become a smarter and more efficient investor.</h3></h1>
+					          <br><br>
+				              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">How To Use Coinsbie</h1>
+				              <h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Helping you become a smarter and more efficient investor.</h3>
 				            </div>
 				          </li>
 			          </ul>

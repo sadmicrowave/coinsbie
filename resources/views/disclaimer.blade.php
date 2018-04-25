@@ -12,7 +12,9 @@
 			          <ul class="cd-hero-slider">
 				          <li class="selected pane">
 				          	<div class="contents text-center">
-				              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Disclaimer<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Let's Get a Few Things Straight...</h3></h1>
+					          <br><br>
+				              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Disclaimer</h1>
+				              <h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Let's Get a Few Things Straight...</h3>
 				            </div>
 				          </li>
 			          </ul>

@@ -10,6 +10,15 @@
 		
 		gtag('config', 'UA-117090827-1');
 	</script>
+	    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Coinsbie">
+    
+    <title>Coinsbie Calculator | Maximizing Your Investment</title>
+
+	
 
 	<script>
 		sessionStorage.setItem("coins", JSON.stringify( {!! $allTickers or '{}' !!} ) ); 	
@@ -30,12 +39,6 @@
 	<meta name="description" content="Maximizing Cryptocurrency investor's Return on Investment by providing potential earning statistics for cryptocurrencies.">
 
 	  
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="author" content="Coinsbie">
-    <title>Coinsbie Calculator | Maximizing Your Investment</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}">

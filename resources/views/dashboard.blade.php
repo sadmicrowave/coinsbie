@@ -14,12 +14,13 @@
 				          <li class="selected pane">
 				          	<div class="contents text-center">
 					          	<br><br>
-				            	<h1 class="wow fadeInDown coinsbie" data-wow-duration="1000ms" data-wow-delay="0.3s">Coinsbie<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Maximizing Cryptocurrency Investor's Return on Investment</h3></h1>
+				            	<h1 class="wow fadeInDown coinsbie" data-wow-duration="1000ms" data-wow-delay="0.3s">Coinsbie</h1>
+				            	<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Maximizing Cryptocurrency Investor's Return on Investment</h3>
 								<p class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">Free cryptocurrency investment statistics to help you make the right investment choices.</p>
 
 								<form action="/coin" method="POST">
 									<input type="hidden" name="_token" value="{{ csrf_token() }}">
-									<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins by Name or Symbol" autofocus aria-label="Search Coins by Name or Symbol" aria-describedby="basic-addon2"/>
+									<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins by Name or Symbol" autofocus aria-label="Search Coins by Name or Symbol"/>
 								</form>
 				            </div>
 				          </li>
@@ -103,7 +104,7 @@
 	              <form id="subscribeForm" class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
 		              <div class="form-group" style="width:100%;">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-		                <input id="subscribe-email-input" type="email" class="form-control" name="email" required placeholder="Email Address" autocorrect="off" autocapitalize="none">
+		                <input id="subscribe-email-input" type="email" class="form-control" name="email" required placeholder="Email Address">
 		                <button id="subscribe-email-btn" class="sub_btn">Subscribe</button>
 		              </div>
 	              </form>

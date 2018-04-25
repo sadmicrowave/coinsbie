@@ -27,10 +27,10 @@
 		    <div id="donate" class="col-md-6">
 			    <div class="site-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s">
 				    <ul class="donate">
-						<li>Donate BTC: <a class="donate" href="#BTCDonate" ref="BTCDonate">3NvmSwsF19NKmTNi2txG8ndvUWXVeRDhnH</a></li>
-					    <li>Donate LTC: <a class="donate" href="#LTCDonate" ref="LTCDonate">MWf8evizV8RmwwPeeFnEPTj7Nhu7LhugMC</a></li>
-					    <li>Donate ETH: <a class="donate" href="#ETHDonate" ref="ETHDonate">0x5bF0E0882A9eB5dCc5FF28E9aF8d38c715B24538</a></li>
-					    <li>Donate BCH: <a class="donate" href="#BCHDonate" ref="BCHDonate">qzv84wfmp63m6rpf60w3lrzyr9fry803g5yjnzhszx</a></li>
+						<li>Donate BTC: <a class="donate" href="#BTCDonate" data-ref="BTCDonate">3NvmSwsF19NKmTNi2txG8ndvUWXVeRDhnH</a></li>
+					    <li>Donate LTC: <a class="donate" href="#LTCDonate" data-ref="LTCDonate">MWf8evizV8RmwwPeeFnEPTj7Nhu7LhugMC</a></li>
+					    <li>Donate ETH: <a class="donate" href="#ETHDonate" data-ref="ETHDonate">0x5bF0E0882A9eB5dCc5FF28E9aF8d38c715B24538</a></li>
+					    <li>Donate BCH: <a class="donate" href="#BCHDonate" data-ref="BCHDonate">qzv84wfmp63m6rpf60w3lrzyr9fry803g5yjnzhszx</a></li>
 				    </ul>
 			    </div>
 		    </div>
