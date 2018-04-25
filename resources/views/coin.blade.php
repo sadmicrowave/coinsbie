@@ -8,29 +8,28 @@
 
 	      <div class="container">
 	        <div class="row justify-content-md-center">
-		          	<div class="col-md-10 wow" data-wow-delay="0.2s">
-			          <ul class="cd-hero-slider">
-				          <li class="selected pane">
-				          	<div class="contents text-center">
-					          	<br>
-				            	<h1 class="wow fadeInDown coin-title" data-wow-duration="1000ms" data-wow-delay="0.3s">{{$coin['name']}} <span class="coin-symbol">({{$coin['symbol']}})</span></h1>
-				              
-								<form action="/coin" method="POST">
-									<input type="hidden" name="_token" value="{{ csrf_token() }}">
-									<input type="text" id="main-search" list="coins" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins by Name or Symbol" autofocus aria-label="Search Coins by Name or Symbol"/>
-									
-									<datalist id="coins"> 
-										@foreach($tickers as $ticker)
-											<option value="{{ $ticker['name'] }}">{{ $ticker['name'] }} ({{ $ticker['symbol']}})</option>
-										@endforeach
-									</datalist>
-									
-								</form>
-				            </div>
-				          </li>
-			          </ul>
-		          	</div>	        
-	          </div>
+	          	<div class="col-md-10 wow" data-wow-delay="0.2s">
+		          <ul class="cd-hero-slider">
+			          <li class="selected pane">
+			          	<div class="contents text-center">
+				          	<br>
+			            	<h1 class="wow fadeInDown coin-title" data-wow-duration="1000ms" data-wow-delay="0.3s">{{$coin['name']}} <span class="coin-symbol">({{$coin['symbol']}})</span></h1>
+			              
+							<form action="/coin" method="POST">
+								<input type="hidden" name="_token" value="{{ csrf_token() }}">
+								<input type="text" id="main-search" list="coins" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins by Name or Symbol" autofocus aria-label="Search Coins by Name or Symbol"/>
+								
+								<datalist id="coins"> 
+									@foreach($tickers as $ticker)
+										<option value="{{ $ticker['name'] }}">{{ $ticker['name'] }} ({{ $ticker['symbol']}})</option>
+									@endforeach
+								</datalist>
+								
+							</form>
+			            </div>
+			          </li>
+		          </ul>
+	          	</div>	        
 	        </div> 
 	      </div> 
     </header>

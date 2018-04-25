@@ -8,21 +8,20 @@
 	      
 	      <div class="container">
 	        <div class="row justify-content-md-center">
-		          	<div class="col-md-10 wow" data-wow-delay="0.2s">
-			          <ul class="cd-hero-slider">
-				          <li class="selected pane">
-				          	<div class="contents text-center">
-				              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">500<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Whoops, looks like something went wrong.</h3></h1>
-							  
-							  <form action="/coin" method="POST">
-								<input type="hidden" name="_token" value="{{ csrf_token() }}">
-								<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins by Name or Symbol"/>
-							  </form>
-				            </div>
-				          </li>
-			          </ul>
-		          	</div>	        
-	          </div>
+	          	<div class="col-md-10 wow" data-wow-delay="0.2s">
+		          <ul class="cd-hero-slider">
+			          <li class="selected pane">
+			          	<div class="contents text-center">
+			              <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">500<h3 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Whoops, looks like something went wrong.</h3></h1>
+						  
+						  <form action="/coin" method="POST">
+							<input type="hidden" name="_token" value="{{ csrf_token() }}">
+							<input type="text" id="main-search" name="search" class="wow fadeInDown form-control" data-wow-duration="1000ms" data-wow-delay="0.3s" placeholder="Search Coins" autofocus aria-label="Search Coins by Name or Symbol"/>
+						  </form>
+			            </div>
+			          </li>
+		          </ul>
+	          	</div>	        
 	        </div> 
 	      </div> 
 	      
