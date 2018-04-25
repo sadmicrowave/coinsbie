@@ -167,9 +167,10 @@
     <script src="{{ asset('public/js/wow.min.js') }}"></script>    
     <script src="{{ asset('public/js/form-validator.min.js') }}"></script>
     <script src="{{ asset('public/js/datatables.min.js') }}"></script>     
-    <script defer src="{{ asset('public/js/font-awesome.min.js') }}"></script>
-    
+    <script defer src="{{ asset('public/js/font-awesome.min.js') }}"></script>        
     <script src="{{ asset('public/js/form-script.js') }}"></script>
+    
+    
     <script src="{{ asset('public/js/main.js') }}"></script>
        
   </body>
