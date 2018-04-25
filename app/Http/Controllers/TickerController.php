@@ -12,6 +12,7 @@
 namespace App\Http\Controllers;
 
 use App\Ticker;
+use App\Historical;
 use App\Search;
 use Illuminate\Http\Request ;
 use App\Http\Requests ;
@@ -22,14 +23,12 @@ use Illuminate\Support\Facades\Redirect;
 
 class TickerController extends Controller
 {	
-		
 	
 	public function processForm(Request $request) 
 	{
         $search = addslashes($request->search) ;
         return Redirect::to('coin/'. $search) ;
     }
-    
     
     /*
 	*	Define search route functionality and return view
@@ -60,9 +59,6 @@ class TickerController extends Controller
 		*/
 	}
 
-    
-    
-    
 	/*
 	*	Used to issue the connection call to the provided API end point and return JSON data
 	*
@@ -123,21 +119,6 @@ class TickerController extends Controller
 		
 		return $bitcoin_market_cap_usd;
 	}
-	
-	/*
-	*	Check if data exists within last 5 minutes
-	*
-	*	@returns bool
-	*/
-	/*
-	public function isFiveMinuteCadence ()
-	{
-		# Perform the query to determine if any records exist and were created within last 5 minutes
-		$tickers = \App\Ticker::whereRaw('created_at > NOW() - INTERVAL 5 MINUTE')->first();
-		
-		return ( $tickers ? true : false );
-	}
-	*/
 
 	/*
 	*	Formulates DB insert string from json data array
@@ -240,6 +221,9 @@ class TickerController extends Controller
 			\App\Ticker::truncate();
 			# Insert new values
 			\App\Ticker::insert($stack);
+			
+			# Insert into historical table also
+			\App\Historical::insert($stack);
 		}
 	}
 	
@@ -250,14 +234,10 @@ class TickerController extends Controller
 	*/
 	public function index ($internal_call=False)
 	{
-		$tickers = \App\Ticker::orderBy('rank', 'asc')
-							//->take(50)
-							->get();
-		
+		$tickers = \App\Ticker::orderBy('rank', 'asc')->get();
 		
 		$allTickers = $tickers->toArray();
 		$top50 = array_slice($tickers->toArray(), 0, 50);
-		
 		
 		if ($internal_call)
 		{
