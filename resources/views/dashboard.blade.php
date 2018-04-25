@@ -103,7 +103,7 @@
 	              <form id="subscribeForm" class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
 		              <div class="form-group" style="width:100%;">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-		                <input id="subscribe-email-input" type="email" class="form-control" name="email" required placeholder="Email Address" autocorrect="off" autocapitalize="none" value="corey.m.farmer@gmail.com">
+		                <input id="subscribe-email-input" type="email" class="form-control" name="email" required placeholder="Email Address" autocorrect="off" autocapitalize="none">
 		                <button id="subscribe-email-btn" class="sub_btn">Subscribe</button>
 		              </div>
 	              </form>
