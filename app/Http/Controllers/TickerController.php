@@ -129,9 +129,7 @@ class TickerController extends Controller
 	*	@returns array stack
 	*/
 	public function formulateInsertQuery ($data, $bitcoin_market_cap_usd)
-	{	
-		echo $bitcoin_market_cap_usd;
-		
+	{			
 		function divide ($dividend, $divisor)
 		{
 			$quotient = 0;
