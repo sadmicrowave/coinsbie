@@ -78,7 +78,6 @@
 		    
 		    <br>
 		    <div class="row justify-content-md-center text-center">
-			    
 			    <div class="col-md-12 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="0.3s"> 
 			    	<button id="loadmore" type="button" class="btn btn-primary rounded">Load Next 50 Coins</button>
 			    </div>
@@ -87,6 +86,32 @@
 		    
 	    </div>	    
     </section> 
+    
+    
+    <!-- Subcribe Section Start -->
+	    <div id="subscribe" class="counters section" data-stellar-background-ratio="0.3">
+		  <div class="overlay"></div>
+	      <div class="container">
+	        <div class="section-header">
+	          <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe To <span>Newsletter</span></h2>
+	          <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+	          <br>
+	          <h4 class="wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Subscribe to get all of our latest news and updates about the site including new features and improvements.</h4>
+	        </div>
+	        <div class="row justify-content-md-center">
+	          <div class="col-md-8">
+	              <form id="subscribeForm" class="text-center form-inline wow fadeInUp" data-wow-delay="0.3s">
+		              <div class="form-group" style="width:100%;">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		                <input id="subscribe-email-input" type="email" class="form-control" name="email" required placeholder="Email Address" autocorrect="off" autocapitalize="none" value="corey.m.farmer@gmail.com">
+		                <button id="subscribe-email-btn" class="sub_btn">Subscribe</button>
+		              </div>
+	              </form>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+    <!-- Subcribe Section End -->
 
 
 @include('partials.footer')

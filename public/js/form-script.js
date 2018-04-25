@@ -15,7 +15,7 @@ $("#contactForm").validator().on("submit", function (event) {
 $("#subscribeForm").validator().on("submit", function(event) {
 	if (event.isDefaultPrevented()) {
         // handle the invalid form...
-        formError($(this), $("#msgSubscribeSubmit"));
+        formError($(this));
     } else {
         // everything looks good!
         event.preventDefault();
@@ -26,22 +26,29 @@ $("#subscribeForm").validator().on("submit", function(event) {
 
 
 
-
 function submitSubscribeForm(){
 	var $this = $(this)
-		,$msgdiv = $("#msgSubscribeSubmit")
+	//	,$msgdiv = $("#msgSubscribeSubmit")
 		,$form = $("#subscribeForm")
 		;
-	$.ajax({'url':'http://localhost:2222/subscribe?email=' + $('#subscribe-email-input').val()
+			
+	$.ajax({'url': './1ac1eb912d7bbeb17a79f70815227395'
+		,'data' : {
+					"_token": $('meta[name="csrf-token"]').attr('content')
+					,"email" : $('#subscribe-email-input').val() 
+				}
 		,'method': 'POST' 
 		,'success': function(data){
-			 $form[0].reset();
-			 submitMSG($msgdiv, true, "Successfully Subscribed!")
+			if ( data['error'] == 1 )
+				formError($form);
+			$('#subscribe-email-input').val('').attr('placeholder', data['body']); 
+			//submitMSG($msgdiv, true, "Successfully Subscribed!")
 		}
 		,'error': function(data){
-			$("#subscribe-status").removeClass('hidden').text('An error occurred while attempting to subscribe!');
-			formError($form, $msgdiv);
-            submitMSG($msgdiv, false, text);
+			//$("#subscribe-status").removeClass('hidden').text('An error occurred while attempting to subscribe!');
+			formError($form);
+			$('#subscribe-email-input').val('').attr('placeholder', data['body']); 
+            //submitMSG($msgdiv, false, text);
 		}
 	});
 }
@@ -120,11 +127,11 @@ function formSuccess(){
     submitMSG($("#msgSubmit"), true, "Message Submitted!")
 }
 
-function formError($form, $msgdiv){
+function formError($form){
     //$("#contactForm")
-    $msgdiv.removeClass().addClass('hidden');
-    $form.removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).removeClass();
+    //$msgdiv.removeClass().addClass('hidden');
+    $form.find('input, button').addClass('danger shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        $(this).removeClass('danger shake animated');
     });
 }
 
@@ -132,7 +139,7 @@ function submitMSG($div, valid, msg){
     if(valid){
         var msgClasses = "h4 text-center fadeInUp animated text-success";
     } else {
-        var msgClasses = "h4 text-center text-danger";
+        var msgClasses = "h4 text-center text-danger danger";
     }
     //$("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
     $div.removeClass().addClass(msgClasses).html(msg);//.delay(15000).fadeOut('slow');

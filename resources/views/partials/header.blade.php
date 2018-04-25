@@ -48,6 +48,7 @@
     
     <!-- Google Fonts -->
     <link href="{{ asset('public/css/sitefonts.min.css') }}" rel="stylesheet">
-      
+    
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
   </head>
   <body>

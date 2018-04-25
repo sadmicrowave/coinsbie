@@ -727,16 +727,7 @@ a:not([href]):not([tabindex]):hover {
   border-color: #4676fa;
   color: #fff;
 }
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  background: #4676fa;
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-}
+
 /* ==========================================================================
     Pricing Table
     ========================================================================== */
@@ -790,33 +781,7 @@ a:not([href]):not([tabindex]):hover {
 .table-left {
   margin-top: 20px;
 }
-/* ==========================================================================
-   Counter Section Style
-   ========================================================================== */
-.counters {
-  background: url('/img/bg1.jpg') fixed;
-  position: relative;
-}
-.counters .facts-item {
-  text-align: center;
-  color: #fff;
-}
-.counters .facts-item .icon {
-  margin-bottom: 20px;
-}
-.counters .facts-item .icon i {
-  font-size: 50px;
-  color: #fff;
-}
-.counters .facts-item .fact-count h3 {
-  font-size: 35px;
-  color: #fff;
-  margin-bottom: 15px;
-}
-.counters .facts-item .fact-count h4 {
-  font-size: 20px;
-  color: #fff;
-}
+
 /* ==========================================================================
    Testimonial Section Style
    ========================================================================== */
@@ -994,7 +959,7 @@ a:not([href]):not([tabindex]):hover {
     ========================================================================== */
 #subscribe form input {
   background: #ffffff;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   border-radius: 4px;
   box-shadow: none;
   color: #999999;
@@ -1628,5 +1593,88 @@ p.calc-error {
 }
 
 .danger {
-	border:1px solid red;
+	border:1px solid red !important;
+}
+
+
+
+
+/* ==========================================================================
+   Counter Section Style
+   ========================================================================== */
+.counters {
+  background: url('../img/bg1.jpg') fixed;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: bottom 150px;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  /*background: #4676fa;*/
+  background-color: rgba(141, 179, 161, 1);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+input#subscribe-email-input {
+	text-align: center;
+	font-size: 1.5em;	
+	background-color: rgba(66, 103, 112, 0.3) !important;
+	border:1px solid #4676fa;
+	color:#fff !important;
+}
+#subscribe-email-btn {
+	opacity:1;
+}
+
+input#subscribe-email-input::-webkit-input-placeholder {
+	padding-right:85px;
+	color: #fff !important;
+	opacity: 1;
+}
+input#subscribe-email-input:-ms-input-placeholder {
+	padding-right:85px;
+	color: #fff !important;
+	opacity: 1;
+}
+input#subscribe-email-input::-ms-input-placeholder {
+	padding-right:85px;
+	color: #fff !important;
+	opacity: 1;
+}
+input#subscribe-email-input::-moz-placeholder {
+	padding-right:85px;
+	color: #fff !important;
+	opacity: 1;
+}
+input#subscribe-email-input:-moz-placeholder {
+	padding-right:85px;
+	color: #fff !important;
+	opacity: 1;
+}
+	
+.counters .facts-item {
+  text-align: center;
+  color: #fff;
+}
+.counters .facts-item .icon {
+  margin-bottom: 20px;
+}
+.counters .facts-item .icon i {
+  font-size: 50px;
+  color: #fff;
+}
+.counters .facts-item .fact-count h3 {
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.counters .facts-item .fact-count h4 {
+  font-size: 20px;
+  color: #fff;
 }
