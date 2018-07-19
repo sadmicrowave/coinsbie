@@ -18,8 +18,6 @@
     
     <title>Coinsbie Calculator | Maximizing Your Investment</title>
 
-	
-
 	<script>
 		sessionStorage.setItem("coins", JSON.stringify( {!! $allTickers or '{}' !!} ) ); 	
 		sessionStorage.setItem('tableIndex', 50);	
@@ -40,15 +38,15 @@
 
 	  
 
-    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/jquery-ui.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/bootstrap.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/fontawesome.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/line-icons.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/animate.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/datatables.min.css') }}">        
-
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/datatables.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('public/css/main.css') }}">        
-    
+	<link rel="stylesheet" type="text/css" href="{{ asset('public/css/slider.css') }}">        
+
     <!-- Google Fonts -->
     <link href="{{ asset('public/css/sitefonts.min.css') }}" rel="stylesheet">
     

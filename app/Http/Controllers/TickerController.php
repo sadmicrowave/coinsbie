@@ -256,19 +256,25 @@ class TickerController extends Controller
 	{
 		if ( $search ) 
 		{
+			# log the search from the user
 			self::logSearch($search);
 			
+			# search for the coin
 			$coin = \App\Ticker::where('symbol', '=', $search)
 							->orWhere('name', '=', $search)
 							->get();
 							
+			# redirect users to 404 page if the coin isn't found
 			if ( $coin->isEmpty() )			
 				\App::abort(404);
-			#	return Redirect::to('404');
 
-			$tickers = self::index(True);
+			# Get the top 50 tickers for the search bar drop down to help people select coins
+			$top50tickers = self::index(True);
+			
+			# search for all coins with a greater rank than the coin
+			$allTickers = \App\Ticker::where('rank', '<=', $coin[0]['rank'])->get();
 		
-			return view('coin')->with(['coin' => $coin[0], 'tickers' => $tickers]);
+			return view('coin')->with(['coin' => $coin[0], 'tickers' => $top50tickers, 'allTickers' =>  json_encode( $allTickers->toArray() ) ]);
 			
 		}
 		

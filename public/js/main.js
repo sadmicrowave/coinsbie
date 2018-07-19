@@ -213,8 +213,8 @@
 	    	,coinamt = ( inv / price ).toFixed(2)
 	    	,potentialearnings = ( inv * potearn ).toFixed(2)
 	    	
-	    	,coinamt = ( ! isNaN(coinamt) ? coinamt : '' )
-	    	,potentialearnings = ( ! isNaN(potentialearnings) ? '$' + String(potentialearnings) : '' )
+	    	,coinamt = ( ! isNaN(coinamt) ? coinamt : '0' )
+	    	,potentialearnings = ( ! isNaN(potentialearnings) ? '$' + String(potentialearnings) : '0' )
 	    	;	    
 	    
 	    if ( $(this).val() && ! $.isNumeric(inv) ) {
